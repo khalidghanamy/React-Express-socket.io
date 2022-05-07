@@ -17,10 +17,8 @@ const io =new Server (server,{
         methods: ["GET","POSt"]
     }
 })
-
 io.on("connection",(socket)=>{
     console.log(`user connected :${socket.id}`);
-
     socket.on('join_room',(data)=>{
         socket.join(data)
     })
